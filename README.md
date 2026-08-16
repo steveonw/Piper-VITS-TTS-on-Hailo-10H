@@ -34,7 +34,8 @@ Measured on the held-out test:
 
 This is a **proof of concept**, not a production-quality TTS release. The decoder still has audible hush/static and INT8 flow quantization reduces voice fidelity.
 
-## What is NOT proven yet
+
+## Still to be validated
 
 At packet v0.1:
 
@@ -118,6 +119,27 @@ The intended runtime is repeated fixed-T inference:
 `sentence -> clause -> short phrase -> word fallback`
 
 Each chunk is kept under T=148, padded, synthesized, cropped to its real length, and appended/streamed.
+
+## Full Development Archive
+
+The complete development history of the TTS backend is **available on request**.
+
+The archive includes:
+
+- experimental Colab notebooks,
+- intermediate ONNX models,
+- calibration datasets,
+- Hailo HAR/HEF build artifacts,
+- compiler and optimization logs,
+- audio comparison results,
+- test outputs,
+- and ZIP snapshots covering development from approximately **v5 through v15**.
+
+The full archive is currently **over 2 GB**, with many intermediate and duplicate experimental artifacts, so it is intentionally not stored directly in this GitHub repository.
+
+This repository instead focuses on the **current reproducible deployment path**, final model architecture, selected reference results, Hailo-10H deployment scripts, and hardware-validation work.
+
+If you are researching the port, trying to reproduce an earlier experiment, or need a specific development version, feel free to open an issue and request the relevant files.
 
 ## Important licensing note
 
