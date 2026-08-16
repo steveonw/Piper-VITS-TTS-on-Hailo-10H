@@ -34,6 +34,7 @@ Measured on the held-out test:
 
 This is a **proof of concept**, not a production-quality TTS release. The decoder still has audible hush/static and INT8 flow quantization reduces voice fidelity.
 
+
 ## Still to be validated
 
 At packet v0.1:
