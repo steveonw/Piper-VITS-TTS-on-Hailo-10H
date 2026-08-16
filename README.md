@@ -9,6 +9,27 @@
 
 This packet is intended to let other people reproduce the **physical Hailo-10H hardware test** of the current proof of concept.
 
+## Full Development Archive
+
+The complete development history of the TTS backend is **available on request**.
+
+The archive includes:
+
+- experimental Colab notebooks,
+- intermediate ONNX models,
+- calibration datasets,
+- Hailo HAR/HEF build artifacts,
+- compiler and optimization logs,
+- audio comparison results,
+- test outputs,
+- and ZIP snapshots covering development from approximately **v5 through v15**.
+
+The full archive is currently **over 2 GB**, with many intermediate and duplicate experimental artifacts, so it is intentionally not stored directly in this GitHub repository.
+
+This repository instead focuses on the **current reproducible deployment path**, final model architecture, selected reference results, Hailo-10H deployment scripts, and hardware-validation work.
+
+If you are researching the port, trying to reproduce an earlier experiment, or need a specific development version, feel free to open an issue and request the relevant files.
+
 ## What is proven already
 
 The two backend networks have been:
