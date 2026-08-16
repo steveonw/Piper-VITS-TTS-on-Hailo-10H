@@ -1,0 +1,63 @@
+{
+  "packet_version": "0.1",
+  "packet_state": "models_embedded",
+  "project": "Amy Medium Piper/VITS backend on Hailo-10H",
+  "created": "2026-08-16",
+  "target": {
+    "host": "Raspberry Pi 5",
+    "accelerator": "Raspberry Pi AI HAT+ 2",
+    "chip": "Hailo-10H"
+  },
+  "voice": {
+    "name": "Amy Medium",
+    "piper_key": "en_US-amy-medium",
+    "sample_rate": 22050
+  },
+  "backend": {
+    "fixed_T": 148,
+    "hop_length": 256,
+    "decoder_full_samples": 37888,
+    "decoder_full_seconds": 1.7182766439909296
+  },
+  "compiler": {
+    "dataflow_compiler": "5.3.0",
+    "hardware_arch": "hailo10h"
+  },
+  "models": [
+    {
+      "role": "reverse_flow",
+      "file": "amy_v15_3_6_flow_realcal.hef",
+      "bytes": 7581696,
+      "sha256": "d349ee5f77400a9182591d65f2f816b547e9d26ac8ff63ac9159cf966fbbbceb",
+      "contexts": 3,
+      "precision": "INT8"
+    },
+    {
+      "role": "waveform_decoder",
+      "file": "amy_decoder_t148_true4d_int8_realflow1024_qat8.hef",
+      "bytes": 2318336,
+      "sha256": "bacc8bbc9d979ea636ddcf8b1687bef13cf13e1b8c082ad5b0a28710cbebe584",
+      "contexts": 2,
+      "precision": "INT8"
+    }
+  ],
+  "sdk_emulator_heldout": {
+    "text": "This is Amy.",
+    "real_T": 95,
+    "valid_samples": 24320,
+    "target_path": "INT8 flow -> INT8 C3 decoder",
+    "corr_vs_fp32": 0.9411022806326711,
+    "rmse": 0.03073089793213756,
+    "max_abs": 0.2526932507753372,
+    "snr_db": 9.27643192884763,
+    "quiet_floor_dbfs": -49.11698761579991
+  },
+  "known_limitations": [
+    "physical Hailo-10H runtime not yet independently validated",
+    "audible decoder hush/static remains",
+    "INT8 flow reduces voice fidelity",
+    "arbitrary-text Raspberry Pi frontend not included in packet v0.1",
+    "fixed T=148 requires chunking for long text"
+  ],
+  "finalized_from_colab": true
+}
