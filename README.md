@@ -157,3 +157,19 @@ Do not assume that this packet grants rights to the Amy voice itself.
   https://github.com/hailo-ai/hailort
 - Amy Medium model directory:
   https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US/amy/medium
+
+## Development Disclosure
+
+This project was developed with substantial assistance from AI coding and
+research tools.
+
+AI assistance was used for code generation, debugging, analysis,
+documentation, and exploring implementation approaches.
+
+The project direction, experimental decisions, execution of the development
+notebooks, model compilation, result evaluation, artifact management, and
+hardware validation are human-directed.
+
+All technical claims in this repository are intended to be supported by
+reproducible artifacts, logs, hashes, test vectors, or hardware measurements
+rather than by AI-generated assertions alone.
